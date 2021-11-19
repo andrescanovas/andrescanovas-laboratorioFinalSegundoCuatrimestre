@@ -5,7 +5,7 @@ import "./hola.css"
 const AplicacionCrudTable = ({data, setDataToEdit, deleteData}) => {
     return(
         <div class="hola">
-            <h3>Datos de Contatos</h3>
+            <h3>Datos de morosos incobrables</h3>
             <table>
                 <thead>
                     <tr>
