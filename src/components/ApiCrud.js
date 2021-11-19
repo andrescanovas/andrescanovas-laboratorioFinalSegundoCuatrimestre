@@ -80,7 +80,7 @@ const ApiCrud = () => {
             }
             
         });
-        //trae la base de datos como esta
+        
 
     };
     // let newData= db.map(el=>el.id ===dato.id? data:el);
