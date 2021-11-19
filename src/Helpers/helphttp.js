@@ -1,14 +1,16 @@
-
-
 export const helpHttp = () => {
     const customFetch = (endopoint, options) => {
+
+        // esta constante indica que los datos estaran en JSON
         const defaultHeader = {
             accept:"application/json",
         };
         //auxiliar de peticiones Fetch
-        //const controller = new AbortController();
-        //options.signal = controller.signal;
-
+        // se usa para abortar la peticion 
+        const controller = new AbortController();
+        // se usa para escuchar eventos
+        options.signal = controller.signal;
+            // se defie GET como metodo predeterminado
         options.method = options.method || "GET";
         options.headers = options.headers
         ?{...defaultHeader,...options.headers}
@@ -16,7 +18,7 @@ export const helpHttp = () => {
         options.body = JSON.stringify(options.body)||false;
 
         if(!options.body) delete options.body;
-        
+        // se marca un tiempo limite 
         //setTimeout(() => controller.abort(),3000);
 
         return fetch (endopoint, options)
@@ -31,6 +33,8 @@ export const helpHttp = () => {
         .catch ((err)=> err);
 
     };
+
+    // se indican los 4 metodos
 
     const get = (url,options={})=> customFetch(url,options);
                 

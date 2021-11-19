@@ -10,7 +10,7 @@ function App() {
   return (
     <div class="hola">
       <div class="titulo">
-      <h1 >Aplicacion con React</h1>
+      <h1 >Aplicacion de Morosos incobrables</h1>
       </div>
       <ApiCrud/>
 

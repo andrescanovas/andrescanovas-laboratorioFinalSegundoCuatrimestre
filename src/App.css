@@ -13,6 +13,23 @@
   }
 }
 
+.campos{
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 200px;
+  height: 40px;
+}
+
+
+.button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

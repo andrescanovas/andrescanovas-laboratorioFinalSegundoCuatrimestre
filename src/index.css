@@ -5,20 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("/src/components/imagenes/primera_imagen.png");
+  background-image: url("/src/components/imagenes/02.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
+  background-color: black;
   color: azure;
 
 
 }
 
 .titulo{
-  background: #4597E8;
+  background: #D83A0E;
   max-width: 900px;
   width: 100%;
   margin-bottom: 50px;
   color: azure;
+  font-size: 20px;
 }
 
 code {
