@@ -4,15 +4,8 @@
 
 .App-logo {
   height: 40vmin;
-  
+  pointer-events: none;
 }
-
-.hola {
-  
-  
-  text-align: center;
-}
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -43,5 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-
