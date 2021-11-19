@@ -8,6 +8,7 @@ import "./hola.css"
 
 
 const ApiCrud = () => {
+    // se inicializa bacia, en db se guardan los datos
     const [db,setDb] = useState([]);
 
     const [dataToEdit,setDataToEdit] = useState(null);
@@ -15,27 +16,28 @@ const ApiCrud = () => {
     const [error,setError] = useState(null);
     //si es null, va a ser una insercion, sino es una edicion
     const [loading, setLoading] = useState(false);
-
+    // se invoca helpHttp
     let api=helpHttp();
+    // se define el endpoint
     let url= "http://localhost:3000/contactos";
 
     //mostamos la respuesta en la UI
     useEffect(()=>{
-        //actualiza la variable setLoading a true para que se pueda visualizar
+        //actualiza la variable setLoading a VERDADERO  para que se vea
             setLoading(true);
         //usamos el metodo GET del Helper
             helpHttp().get(url).then((res)=>{
         //cuando la respuesta no tenga una propiedad llamada error, actualizará la variable db con la respuesta arrojada por la petición
                 if(!res.err){
                     setDb(res)
-        //si no hubo error, la variable de error se actualiza a null
+        //si no salto error, la variable se pasa a null
                     setError(null);
                 }else{
-        //en cambio, si hubo un error la base de datos no cargará la información
+        //si hay un error en la bbdd la misma no se mostrara
                     setDb(null);
                     setError(res)
                 }
-        //al finalizar la promesa de la peticion GET vuelve a falso
+        //al terminar la peticion GET vuelve a falso
             setLoading(false);
             });
             },[url]);
@@ -120,7 +122,7 @@ const ApiCrud = () => {
 //   }
     return(
         <div class="hola">
-            <h2 class="hola"> CRUD API </h2>
+            <h2 class="hola"> Nuevo Morosos </h2>
             <AplicacionCrudForm
             createData = {createData}
             updateData = {updateData}
