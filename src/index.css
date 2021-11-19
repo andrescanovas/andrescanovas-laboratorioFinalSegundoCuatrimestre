@@ -8,8 +8,17 @@ body {
   background-image: url("/src/components/imagenes/primera_imagen.png");
   background-repeat: no-repeat;
   background-size: cover;
+  color: azure;
 
 
+}
+
+.titulo{
+  background: #4597E8;
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: 50px;
+  color: azure;
 }
 
 code {

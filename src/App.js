@@ -9,8 +9,9 @@ import ApiCrud from './components/ApiCrud';
 function App() {
   return (
     <div class="hola">
-      <h1>Aplicacion con React</h1>
-
+      <div class="titulo">
+      <h1 >Aplicacion con React</h1>
+      </div>
       <ApiCrud/>
 
       {/* <AplicacionCrudApp/> */}
